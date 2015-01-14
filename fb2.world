@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<world version="1.17">
+	<materials>
+		<library>/materials/fb2.mat</library>
+	</materials>
+	<sound>
+		<source source="2" volume="0.005"/>
+		<source source="3" volume="0.005"/>
+		<source source="4" volume="0.005"/>
+		<source source="5" volume="0"/>
+		<source source="6" volume="0"/>
+		<source source="7" volume="0"/>
+	</sound>
+	<render>
+		<shadow_distance>500</shadow_distance>
+		<ambient_color>0.05 0.05 0.05 1</ambient_color>
+		<reflection_color>0.876227 0.876227 0.876227 1</reflection_color>
+		<background_color>0.0499462 0.0690956 0.0999001 1</background_color>
+		<environment_coefficients>0.131138 0.16326 0.185611 0 0.0122885 0.0136915 0.0150657 0 -0.00648768 0.0043301 0.0586693 0 -0.0146912 -0.0180374 -0.0254918 0 -0.00940726 -0.0137339 -0.0229446 0 0.00328094 0.00458452 0.00950034 0 -0.00947195 -0.0117373 -0.0156854 0 -0.000815176 -0.00174138 -0.00663405 0 0.00233044 0.00352847 0.00649455 0</environment_coefficients>
+		<occlusion_ambient_screen_radius>0.025</occlusion_ambient_screen_radius>
+		<occlusion_ambient_sample_radius>2</occlusion_ambient_sample_radius>
+		<occlusion_ambient_perspective>0.2</occlusion_ambient_perspective>
+		<occlusion_ambient_threshold>30</occlusion_ambient_threshold>
+		<occlusion_ambient_power>7</occlusion_ambient_power>
+		<occlusion_light_screen_radius>0.2</occlusion_light_screen_radius>
+		<occlusion_light_sample_radius>15</occlusion_light_sample_radius>
+		<occlusion_light_perspective>0.2</occlusion_light_perspective>
+		<occlusion_light_threshold>1.5</occlusion_light_threshold>
+		<occlusion_light_emitter>0.5</occlusion_light_emitter>
+		<occlusion_light_scale>8</occlusion_light_scale>
+		<occlusion_light_power>1.3</occlusion_light_power>
+		<motion_blur_linear_scale>0.4</motion_blur_linear_scale>
+		<motion_blur_angular_scale>0.1</motion_blur_angular_scale>
+		<scattering_sun_color>0.913456 0.999767 0.64965 1</scattering_sun_color>
+		<scattering_ray_color>0.119994 0.140013 0.15005 1</scattering_ray_color>
+		<scattering_mie_color>0.79935 0.79935 0.79935 1</scattering_mie_color>
+		<scattering_inner_angle>0.7</scattering_inner_angle>
+		<scattering_outer_angle>1.5</scattering_outer_angle>
+		<scattering_refractive>1.003</scattering_refractive>
+		<scattering_density>2.5e+025</scattering_density>
+		<scattering_depolarization>0.035</scattering_depolarization>
+		<scattering_turbidity>2</scattering_turbidity>
+		<scattering_areal>25</scattering_areal>
+		<scattering_ray_height>20000</scattering_ray_height>
+		<scattering_mie_height>10000</scattering_mie_height>
+		<scattering_greenstein>0.984915</scattering_greenstein>
+		<scattering_energy>31.988</scattering_energy>
+		<scattering_power>1.1996</scattering_power>
+		<scattering_ray>0.11996</scattering_ray>
+		<scattering_mie>0.0601196</scattering_mie>
+		<volumetric_exposure>0</volumetric_exposure>
+		<volumetric_length>0.2</volumetric_length>
+		<dof_focal_distance>3</dof_focal_distance>
+		<dof_far_blur_range>750</dof_far_blur_range>
+		<dof_far_blur_power>0.5</dof_far_blur_power>
+		<dof_far_focal_power>2</dof_far_focal_power>
+		<dof_near_blur_range>7</dof_near_blur_range>
+		<dof_near_blur_power>0.6</dof_near_blur_power>
+		<dof_near_focal_power>2</dof_near_focal_power>
+		<hdr_exposure>0.35</hdr_exposure>
+		<hdr_adaptation>0.5</hdr_adaptation>
+		<hdr_min_luminance>-1.2</hdr_min_luminance>
+		<hdr_max_luminance>1</hdr_max_luminance>
+		<hdr_threshold>1.5</hdr_threshold>
+		<hdr_small_exposure>0.1</hdr_small_exposure>
+		<hdr_medium_exposure>0.2</hdr_medium_exposure>
+		<hdr_large_exposure>0.7</hdr_large_exposure>
+		<hdr_bright_exposure>0.05</hdr_bright_exposure>
+		<hdr_cross_enabled>1</hdr_cross_enabled>
+		<hdr_cross_color>0.12 0.12 0.12 1</hdr_cross_color>
+		<hdr_cross_scale>0.4</hdr_cross_scale>
+		<hdr_cross_shafts>8</hdr_cross_shafts>
+		<hdr_cross_length>0.125</hdr_cross_length>
+		<hdr_cross_angle>25</hdr_cross_angle>
+		<hdr_cross_threshold>10</hdr_cross_threshold>
+		<hdr_shaft_scale>0.7</hdr_shaft_scale>
+		<hdr_shaft_length>0.9</hdr_shaft_length>
+		<hdr_shaft_threshold>2.5</hdr_shaft_threshold>
+		<hdr_lens_color>0.00989804 0.00989804 0.00989804 1</hdr_lens_color>
+		<hdr_lens_scale>0.5</hdr_lens_scale>
+		<hdr_lens_threshold>10</hdr_lens_threshold>
+	</render>
+	<editor>
+		<node type="NodeDummy" id="1979152485" name="engine2">
+			<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 -2.62195 2.73933 1</transform>
+			<node type="NodeDummy" id="865572861" folded="1" name="group1">
+				<transform>1 0 0 0 0 0.998491 0.0549153 0 0 -0.0549153 0.998491 0 0 0 -0.15 1</transform>
+				<node clash="0" type="ObjectMesh" id="786433938" name="polySurface2">
+					<mesh>meshes/polySurface2.mesh</mesh>
+					<surface name="surface_0" material="library_metal_plating_1"/>
+					<transform>1 0 0 0 0 1 0 0 0 0 1 2.86706e-042 0 0 0 0</transform>
+					<node type="NodeAnotation" id="838047366" enabled="0" name="FSZZZYJ">
+						<feature name="风扇转子增压级" start_point="-2.57265 1.99606 0.683691" knee_point="-2.04218 0.973316 4.36209" end_point="-4.48027 -1.95864 6.99829"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+					</node>
+				</node>
+				<node clash="0" type="ObjectMesh" id="843862096" name="polySurface3">
+					<mesh>meshes/polySurface3.mesh</mesh>
+					<surface name="surface_0" material="library_metal_tin_1"/>
+					<transform>1 0 0 0 0 1 0 0 0 0 1 2.86706e-042 0 0 0 0</transform>
+					<node type="NodeAnotation" id="448735611" enabled="0" name="polySurface3">
+						<feature name="风扇增压级单元体" start_point="-2.26044 1.11389 2.11027" knee_point="-0.998718 1.34967 4.18087" end_point="-0.532545 -1.45492 6.83801"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+					</node>
+					<node type="NodeAnotation" id="910796056" enabled="0" name="FSJX">
+						<feature name="风扇机匣" start_point="-3.04434 1.12292 -2.24747" knee_point="-2.4958 0.0528784 -4.95811" end_point="-2.17122 -2.36129 -2.35839"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+					</node>
+				</node>
+				<node clash="0" type="ObjectMesh" id="1366192909" name="polySurface4">
+					<mesh>meshes/polySurface4.mesh</mesh>
+					<surface name="surface_0" material="library_metal_tin_1"/>
+					<transform>1 0 0 0 0 1 0 0 0 0 1 2.86706e-042 0 0 0 0</transform>
+					<node type="NodeAnotation" id="1883328477" enabled="0" name="ZJJX">
+						<feature name="中介机匣" start_point="-1.3061 1.79228 1.1656" knee_point="-0.223145 0.235096 5.0059" end_point="1.81547 -2.72825 7.60059"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+					</node>
+				</node>
+			</node>
+			<node type="NodeDummy" id="1810767968" folded="1" name="group2">
+				<transform>1 0 0 2.86706e-042 0 1 0 0 0 0 1 0 0 0 0 0</transform>
+				<node clash="0" type="ObjectMesh" id="1087340414" name="polySurface6">
+					<mesh>meshes/polySurface6.mesh</mesh>
+					<surface name="surface_0" material="library_metal_plating_1"/>
+					<transform>1 0 0 0 0 1 0 0 0 0 1 2.86706e-042 0 0 0 0</transform>
+					<node type="NodeAnotation" id="1844208242" enabled="0" name="WLHJX">
+						<feature name="涡轮后机匣" start_point="4.45362 1.69815 1.12845" knee_point="5.49438 0.389528 3.66106" end_point="13.0982 -2.205 6.40039"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+					</node>
+				</node>
+				<node clash="0" type="ObjectMesh" id="775123213" name="polySurface16">
+					<mesh>meshes/polySurface16.mesh</mesh>
+					<surface name="surface_0" material="library_metal_plating_1"/>
+					<transform>1 0 0 0 0 1 0 0 0 0 1 2.86706e-042 0 0 0 0</transform>
+					<node type="NodeAnotation" id="318383619" enabled="0" name="polySurface16">
+						<feature name="低压涡轮单元体" start_point="4.0241 2.26185 1.51026" knee_point="4.61353 1.953 3.30361" end_point="11.1196 -0.716789 6.04294"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+					</node>
+					<node type="NodeAnotation" id="618160925" enabled="0" name="DYWLJZZ">
+						<feature name="低压涡轮转静子" start_point="3.68399 2.58153 -1.55709" knee_point="4.08276 2.28504 -4.82917" end_point="10.7154 -0.308184 -2.08984"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+					</node>
+				</node>
+			</node>
+			<node type="NodeDummy" id="1327468093" folded="1" name="group3">
+				<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0</transform>
+				<node clash="0" type="ObjectMesh" id="1121062973" name="polySurface10">
+					<mesh>meshes/polySurface10.mesh</mesh>
+					<surface name="surface_0" material="library_metal_plating_1"/>
+					<transform>1 0 0 0 0 1 0 0 0 0 1 2.86706e-042 0 0 0 0</transform>
+					<node type="NodeAnotation" id="1589064308" enabled="0" name="GYWL">
+						<feature name="高压涡轮" start_point="2.46533 2.61441 0.938991" knee_point="2.75708 2.12586 2.37786" end_point="8.38986 -0.573788 5.11719"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+					</node>
+				</node>
+				<node clash="0" type="ObjectMesh" id="691787169" name="polySurface11">
+					<mesh>meshes/polySurface11.mesh</mesh>
+					<surface name="surface_0" material="library_metal_plating_1"/>
+					<transform>0.999973 0 0.00738899 0 0 1 0 0 -0.00738899 0 0.999973 0 0 0 0 1</transform>
+					<node type="NodeAnotation" id="1071784559" enabled="0" name="RSS">
+						<feature name="燃烧室" start_point="1.88593 2.12566 0.469242" knee_point="2.67981 0.539919 3.73699" end_point="7.26732 -2.15417 6.47632"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+					</node>
+				</node>
+				<node type="NodeDummy" id="565358454" name="group4">
+					<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0</transform>
+					<node clash="0" type="ObjectMesh" id="1815628343" name="polySurface8">
+						<mesh>meshes/polySurface8.mesh</mesh>
+						<surface name="surface_0" material="library_metal_plating_1"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 2.86706e-042 0 0 0 0</transform>
+					</node>
+					<node clash="0" type="ObjectMesh" id="158985444" name="polySurface12">
+						<mesh>meshes/polySurface12.mesh</mesh>
+						<surface name="surface_0" material="library_metal_plating_1"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 2.86706e-042 0 0 0 0</transform>
+						<node type="NodeAnotation" id="744861555" enabled="0" name="polySurface12">
+							<feature name="核心机单元体" start_point="1.1904 2.3326 0.560908" knee_point="1.44531 2.25379 1.91765" end_point="5.89308 -0.410488 4.65698"/>
+							<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+						</node>
+					</node>
+					<node clash="0" type="ObjectMesh" id="248595323" name="polySurface13">
+						<mesh>meshes/polySurface13.mesh</mesh>
+						<surface name="surface_0" material="library_metal_plating_1"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 2.86706e-042 0 0 0 0</transform>
+						<node type="NodeAnotation" id="1842209737" enabled="0" name="GYYQJ">
+							<feature name="高压压气机" start_point="-0.102129 2.61065 -0.742573" knee_point="0.309814 1.45007 -5.02034" end_point="3.88015 -1.24191 -2.28101"/>
+							<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+						</node>
+					</node>
+				</node>
+			</node>
+			<node clash="0" type="ObjectMesh" id="1731732391" name="polySurface1">
+				<mesh>meshes/polySurface1.mesh</mesh>
+				<surface name="surface_0" material="dvs_base_1"/>
+				<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+			</node>
+		</node>
+		<node type="NodeDummy" id="1655953111" name="engineFX">
+			<transform>1 0 0 0 0 1 0 0 0 0 1 0 -3.687 0.319 2.722 1</transform>
+			<node clash="0" type="ObjectMesh" id="516199205" name="polySurface15">
+				<mesh>meshes/polySurface15.mesh</mesh>
+				<surface name="surface_0" material="library_metal_stainless_steel_0"/>
+				<transform>1 0 0 0 0 5.96046e-008 -1 0 0 1 5.96046e-008 0 0.296558 0 0 1</transform>
+				<node type="NodeAnotation" id="66505671" enabled="0" name="FSYP">
+					<feature name="风扇叶片" start_point="0.136683 1.69776 -1.57285" knee_point="0.929178 4.70393 -2.66177" end_point="-6.41399 -2.40997 -1.98193"/>
+					<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+				</node>
+			</node>
+			<node clash="0" type="ObjectMesh" id="1399564562" name="polySurface14">
+				<mesh>meshes/polySurface14.mesh</mesh>
+				<surface name="surface_0" material="library_metal_plating_3"/>
+				<transform>1 0 0 0 0 5.96046e-008 -1 0 0 1 5.96046e-008 0 -0.430583 0 0 1</transform>
+				<node type="NodeAnotation" id="492050834" enabled="0" name="ZLZ">
+					<feature name="整流罩" start_point="-0.0160675 -0.229776 -0.321109" knee_point="0.491108 -3.79265 -1.17252" end_point="-8.50376 -0.929952 6.51465"/>
+					<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+				</node>
+			</node>
+		</node>
+		<node type="LightWorld" id="1911919901">
+			<scattering>0</scattering>
+			<shadow_range>5000</shadow_range>
+			<shadow_distribute>0</shadow_distribute>
+			<color>0.782176 0.825314 1 1</color>
+			<diffuse_scale>0.96</diffuse_scale>
+			<specular_scale>0.973</specular_scale>
+			<specular_power>0.68</specular_power>
+			<shadow_size>5</shadow_size>
+			<translucent_size>5</translucent_size>
+			<shadow_bias>5.257</shadow_bias>
+			<shadow_slope>2.114</shadow_slope>
+			<shadow_softness>2.457</shadow_softness>
+			<transform>0.876984 0.151145 0.456129 0 -0.330801 0.878396 0.344951 0 -0.348525 -0.453405 0.820339 0 -1.20992 -2.4459 0 1</transform>
+		</node>
+		<node type="NodeDummy" id="1603410696" class="2" enabled="0" name="dvs_weather_system">
+			<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+			<node type="LightWorld" id="199170409" class="2" name="dvs_weather_system_sun">
+				<scattering>1</scattering>
+				<shadow_range>2000</shadow_range>
+				<shadow_distribute>0.3</shadow_distribute>
+				<color>1 0.670119 0.4002 1</color>
+				<multiplier>0</multiplier>
+				<shadow_size>4</shadow_size>
+				<shadow_softness>2</shadow_softness>
+				<transform>-1 -0 -8.74228e-008 -0 0 1 0 0 8.74228e-008 0 -1 0 0 0 0 1</transform>
+			</node>
+			<node type="LightWorld" id="243910254" class="2" collider="0" name="dvs_weather_system_moon">
+				<scattering>1</scattering>
+				<shadow_range>8000</shadow_range>
+				<shadow_distribute>0.1</shadow_distribute>
+				<viewport_mask>15</viewport_mask>
+				<deferred>1</deferred>
+				<color>0.26992 0.289213 0.2999 1</color>
+				<translucent>1</translucent>
+				<shadow_size>4</shadow_size>
+				<shadow_softness>2</shadow_softness>
+				<translucent_bias>0</translucent_bias>
+				<transform>-1 -0 -8.74228e-008 -0 0 1 0 0 8.74228e-008 0 -1 0 0 0 0 1</transform>
+			</node>
+			<node type="WorldExpression" id="608245218" class="2" name="moon_billboard_expression">
+				<size>100000 100000 100000</size>
+				<expression>{
+
+// get parent
+Node parent = getParent();
+if(parent == 0) return;
+
+// get player
+Player player = engine.getDVSMode() ? engine.game.getPlayer() : engine.editor.getPlayer();
+if(player == 0) return;
+
+// player position
+mat4 transform = translate(player.getWorldPosition()) * rotation(parent.getWorldTransform()) * translate(0.0f,0.0f,7500.0f);
+
+// transform childs
+Node node = getNode();
+forloop(int i = 0; node.getNumChilds()) {
+Node child = node.getChild(i);
+child.setWorldTransform(transform);
+}
+
+}</expression>
+				<transform>0.784885 0.453154 -0.422618 0 0.5 -0.866025 2.89902e-008 0 -0.365998 -0.211309 -0.906308 -0 432.778 74.3523 -3.19291e-008 1</transform>
+			</node>
+			<node type="ObjectBillboard" id="714120453" class="2" collider="0" folded="1" name="moon_billboard">
+				<width>800</width>
+				<height>800</height>
+				<axis_x>1</axis_x>
+				<screen>1</screen>
+				<surface name="billboard" viewport_mask="15" material="dvs_weather_system_moon" property="surface_base"/>
+				<transform>0.784885 0.453154 -0.422618 0 0.5 -0.866025 1.07011e-009 0 -0.365998 -0.211309 -0.906308 -0 -1877.46 -1435.06 -6795.35 1</transform>
+			</node>
+			<node type="ObjectSky" id="2088092639" class="2" collider="0" name="dvs_weather_system_sky">
+				<size>8000 8000 300</size>
+				<min_slices>256</min_slices>
+				<max_slices>512</max_slices>
+				<distribute>4</distribute>
+				<humidity>0.8</humidity>
+				<transition>0.5</transition>
+				<extinction>0.6</extinction>
+				<density_image>core/resources/weatherSystem/textures/cloud1/clouds.png</density_image>
+				<density_velocity>30 30 0</density_velocity>
+				<density_offset>22.999 22.999 0</density_offset>
+				<density_layer>2</density_layer>
+				<surface name="sphere" material="dvs_weather_system_sky" property="surface_base">
+					<material>
+						<blend src="src_alpha" dest="one_minus_src_alpha"/>
+						<options post_scattering="1"/>
+					</material>
+				</surface>
+				<surface name="volume" material="dvs_weather_system_sky" property="surface_base">
+					<material>
+						<blend src="src_alpha" dest="one_minus_src_alpha"/>
+						<options post_scattering="1" two_sided="1"/>
+						<state name="surface">1</state>
+					</material>
+				</surface>
+				<surface name="shadow" enabled="0" material="dvs_weather_system_sky" property="surface_base">
+					<material>
+						<blend src="zero" dest="src_alpha"/>
+						<options/>
+						<state name="surface">2</state>
+					</material>
+				</surface>
+				<transform>1 0 0 0 0 1 0 0 0 0 1 0 432.778 74.3523 1000 1</transform>
+			</node>
+			<node type="WorldExpression" id="103466880" class="2" folded="1" name="NodesToPlayerBinding1">
+				<size>100000 100000 100000</size>
+				<expression>{
+
+// get player
+Player player = engine.getDVSMode() ? engine.game.getPlayer() : engine.editor.getPlayer();
+if(player == 0) return;
+
+// player position
+vec3 offset = vec3(0.0f,0.0f,-15.0f);
+mat4 transform = translate(player.getWorldTransform() * offset);
+
+// transform childs
+Node node = getNode();
+forloop(int i = 0; node.getNumChilds()) {
+Node child = node.getChild(i);
+child.setWorldTransform(transform);
+}
+
+}</expression>
+				<transform>1 0 0 0 0 1 0 0 0 0 1 0 432.778 74.3523 0 1</transform>
+				<node type="NodeDummy" id="1117908414" class="2" name="NodesContainer">
+					<transform>1 0 0 0 0 1 0 0 0 0 1 0 -435.727 -78.5059 3.66152 1</transform>
+					<node type="SoundSource" id="889415162" class="2" folded="1" name="dvs_weather_system_sound_rain">
+						<sample>core/resources/weatherSystem/audios/rain.wav</sample>
+						<stream>0</stream>
+						<loop>1</loop>
+						<gain>0</gain>
+						<max_distance>100</max_distance>
+						<cone_outer_angle>180</cone_outer_angle>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+					</node>
+					<node type="SoundSource" id="889415161" class="2" folded="1" name="dvs_weather_system_sound_wind">
+						<sample>core/resources/weatherSystem/audios/wind.wav</sample>
+						<stream>0</stream>
+						<loop>1</loop>
+						<time>3.78497</time>
+						<gain>0</gain>
+						<max_distance>100</max_distance>
+						<cone_outer_angle>180</cone_outer_angle>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+					</node>
+					<node type="ObjectParticles" id="889415160" class="2" enabled="0" collider="0" name="dvs_weather_system_snow_flakes">
+						<variation_x>1</variation_x>
+						<variation_y>1</variation_y>
+						<spawn_rate>0</spawn_rate>
+						<length_stretch>0.2</length_stretch>
+						<emitter_type>3</emitter_type>
+						<emitter_enabled>1</emitter_enabled>
+						<emitter_based>1</emitter_based>
+						<emitter_continuous>0</emitter_continuous>
+						<emitter_size>70 70 0</emitter_size>
+						<emitter_direction>0 0 -10</emitter_direction>
+						<emitter_spread>1 1 0</emitter_spread>
+						<life_mean>8</life_mean>
+						<life_spread>0</life_spread>
+						<velocity_mean>4</velocity_mean>
+						<velocity_spread>7.996</velocity_spread>
+						<rotation_mean>0</rotation_mean>
+						<rotation_spread>100</rotation_spread>
+						<radius_mean>0.05</radius_mean>
+						<radius_spread>0.01</radius_spread>
+						<force>
+							<attached>1</attached>
+							<transform>1 0 0 0 0 1 0 0 0 0 1 0 1.52588e-005 1.52588e-005 -6.41082 1</transform>
+							<radius>40</radius>
+							<attenuation>1</attenuation>
+							<attractor>-3</attractor>
+							<rotator>4</rotator>
+						</force>
+						<surface name="particles" material="dvs_weather_system_snow_flake" property="surface_base"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 -2.44066 -4.50647 27.7426 1</transform>
+						<node type="ObjectParticles" id="889415159" class="2" collider="0" name="dvs_weather_system_snow_flakes_2">
+							<variation_x>1</variation_x>
+							<variation_y>1</variation_y>
+							<spawn_rate>0</spawn_rate>
+							<length_stretch>0.2</length_stretch>
+							<emitter_type>3</emitter_type>
+							<emitter_enabled>1</emitter_enabled>
+							<emitter_based>1</emitter_based>
+							<emitter_continuous>0</emitter_continuous>
+							<emitter_size>70 70 0</emitter_size>
+							<emitter_direction>0 0 -10</emitter_direction>
+							<emitter_spread>4 4 0</emitter_spread>
+							<life_mean>8</life_mean>
+							<life_spread>0</life_spread>
+							<velocity_mean>4</velocity_mean>
+							<velocity_spread>4</velocity_spread>
+							<rotation_mean>0</rotation_mean>
+							<rotation_spread>100</rotation_spread>
+							<radius_mean>0.06</radius_mean>
+							<radius_spread>0.02</radius_spread>
+							<force>
+								<attached>1</attached>
+								<transform>1 0 0 0 0 1 0 0 0 0 1 0 1.52588e-005 1.52588e-005 -6.41082 1</transform>
+								<radius>40</radius>
+								<attenuation>1</attenuation>
+								<attractor>-3</attractor>
+								<rotator>4</rotator>
+							</force>
+							<surface name="particles" material="dvs_weather_system_snow_flake_2" property="surface_base"/>
+							<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+						</node>
+						<node type="ObjectParticles" id="889415158" class="2" collider="0" name="dvs_weather_system_snow_flakes_3">
+							<variation_x>1</variation_x>
+							<variation_y>1</variation_y>
+							<spawn_rate>0</spawn_rate>
+							<length_stretch>0.2</length_stretch>
+							<emitter_type>3</emitter_type>
+							<emitter_enabled>1</emitter_enabled>
+							<emitter_based>1</emitter_based>
+							<emitter_continuous>0</emitter_continuous>
+							<emitter_size>70 70 0</emitter_size>
+							<emitter_direction>0 0 -10</emitter_direction>
+							<emitter_spread>4 4 0</emitter_spread>
+							<life_mean>8</life_mean>
+							<life_spread>0</life_spread>
+							<velocity_mean>4</velocity_mean>
+							<velocity_spread>4</velocity_spread>
+							<rotation_mean>0</rotation_mean>
+							<rotation_spread>100</rotation_spread>
+							<radius_mean>0.06</radius_mean>
+							<radius_spread>0.03</radius_spread>
+							<force>
+								<attached>1</attached>
+								<transform>1 0 0 0 0 1 0 0 0 0 1 0 1.52588e-005 1.52588e-005 -6.41082 1</transform>
+								<radius>40</radius>
+								<attenuation>1</attenuation>
+								<attractor>-3</attractor>
+								<rotator>4</rotator>
+							</force>
+							<surface name="particles" material="dvs_weather_system_snow_flake_3" property="surface_base"/>
+							<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+						</node>
+					</node>
+					<node type="ObjectParticles" id="205911703" class="2" collider="0" name="dvs_weather_system_rain_drops">
+						<particles_type>3</particles_type>
+						<spawn_rate>0</spawn_rate>
+						<physical_mask>-1</physical_mask>
+						<length_stretch>0.1</length_stretch>
+						<emitter_type>3</emitter_type>
+						<emitter_enabled>1</emitter_enabled>
+						<emitter_size>110 110 0</emitter_size>
+						<emitter_direction>0 0 -20</emitter_direction>
+						<emitter_spread>1.125 1.5 0</emitter_spread>
+						<life_mean>1</life_mean>
+						<life_spread>0</life_spread>
+						<velocity_mean>40</velocity_mean>
+						<velocity_spread>27</velocity_spread>
+						<radius_mean>0.06</radius_mean>
+						<radius_spread>0.03</radius_spread>
+						<gravity>0 0 -10</gravity>
+						<force>
+							<attached>1</attached>
+							<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+							<radius>80</radius>
+							<attenuation>1</attenuation>
+							<attractor>0</attractor>
+							<rotator>0</rotator>
+						</force>
+						<deflector>
+							<type>1</type>
+							<attached>0</attached>
+							<transform>0.714943 -0.699183 0 0 0.699183 0.714943 0 0 0 0 1 0 -13.8634 -216.975 4.37719 1</transform>
+							<size>5.5 9.9 0</size>
+							<restitution>0.85</restitution>
+							<roughness>0</roughness>
+						</deflector>
+						<surface name="particles" max_fade_distance="1e+008" material="dvs_weather_system_rain_drops" property="surface_base"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 -2.44066 -4.50647 27.7426 1</transform>
+					</node>
+					<node type="ObjectParticles" id="2053704425" class="2" collider="0" folded="1" name="dvs_weather_system_rain_drops_collision1">
+						<particles_type>3</particles_type>
+						<collision>1</collision>
+						<culling>1</culling>
+						<spawn_rate>0</spawn_rate>
+						<physical_mask>-1</physical_mask>
+						<length_stretch>0.3</length_stretch>
+						<emitter_type>3</emitter_type>
+						<emitter_enabled>1</emitter_enabled>
+						<emitter_size>30 30 0</emitter_size>
+						<emitter_direction>0 4.96845 -20</emitter_direction>
+						<emitter_spread>1.33123 2.32492 0</emitter_spread>
+						<life_mean>1</life_mean>
+						<life_spread>0</life_spread>
+						<velocity_mean>60</velocity_mean>
+						<velocity_spread>40</velocity_spread>
+						<radius_mean>0.1</radius_mean>
+						<radius_spread>0.04</radius_spread>
+						<gravity>0 0 -10</gravity>
+						<force>
+							<attached>1</attached>
+							<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+							<radius>80</radius>
+							<attenuation>1</attenuation>
+							<attractor>0</attractor>
+							<rotator>0</rotator>
+						</force>
+						<surface name="particles" enabled="0" max_fade_distance="1e+008" material="dvs_weather_system_rain_drops" property="surface_base"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 30 1</transform>
+						<node type="ObjectParticles" id="1352666052" class="2" collider="0" name="dvs_weather_system_rain_splashes">
+							<variation_x>1</variation_x>
+							<variation_y>1</variation_y>
+							<spawn_rate>1</spawn_rate>
+							<growth_damping>1</growth_damping>
+							<emitter_type>5</emitter_type>
+							<emitter_enabled>1</emitter_enabled>
+							<emitter_direction>0 0 10</emitter_direction>
+							<life_mean>0.3</life_mean>
+							<life_spread>0.1</life_spread>
+							<velocity_mean>0</velocity_mean>
+							<velocity_spread>0.3</velocity_spread>
+							<radius_mean>0.05</radius_mean>
+							<radius_spread>0.025</radius_spread>
+							<growth_mean>0.05</growth_mean>
+							<growth_spread>0.05</growth_spread>
+							<gravity>0 0 -5</gravity>
+							<surface name="particles" material="dvs_weather_system_rain_splash" property="surface_base"/>
+							<transform>1 0 0 0 0 1 0 0 0 0 1 0 3.48336 -2.71939 -0.352833 1</transform>
+						</node>
+						<node type="ObjectParticles" id="1026232940" class="2" collider="0" name="dvs_weather_system_rain_splashes_fume">
+							<variation_x>1</variation_x>
+							<variation_y>1</variation_y>
+							<texture_atlas>1</texture_atlas>
+							<spawn_rate>1</spawn_rate>
+							<growth_damping>1</growth_damping>
+							<emitter_type>5</emitter_type>
+							<emitter_enabled>1</emitter_enabled>
+							<emitter_direction>0 0 10</emitter_direction>
+							<life_mean>0.8</life_mean>
+							<life_spread>0.1</life_spread>
+							<velocity_mean>0.7</velocity_mean>
+							<velocity_spread>0.3</velocity_spread>
+							<radius_mean>0.2</radius_mean>
+							<radius_spread>0.05</radius_spread>
+							<growth_mean>0.1</growth_mean>
+							<growth_spread>0.05</growth_spread>
+							<gravity>0 0 -2</gravity>
+							<surface name="particles" material="dvs_weather_system_fume" property="surface_base"/>
+							<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+						</node>
+					</node>
+					<node type="ObjectParticles" id="990009858" class="2" collider="0" folded="1" name="dvs_weather_system_rain_drops_collision2">
+						<particles_type>3</particles_type>
+						<collision>1</collision>
+						<culling>1</culling>
+						<spawn_rate>0</spawn_rate>
+						<physical_mask>-1</physical_mask>
+						<length_stretch>0.3</length_stretch>
+						<emitter_type>3</emitter_type>
+						<emitter_enabled>1</emitter_enabled>
+						<emitter_size>70 70 0</emitter_size>
+						<emitter_direction>0 4.96845 -20</emitter_direction>
+						<emitter_spread>1.33123 2.32492 0</emitter_spread>
+						<life_mean>1</life_mean>
+						<life_spread>0</life_spread>
+						<velocity_mean>60</velocity_mean>
+						<velocity_spread>40</velocity_spread>
+						<radius_mean>0.1</radius_mean>
+						<radius_spread>0.04</radius_spread>
+						<gravity>0 0 -10</gravity>
+						<force>
+							<attached>1</attached>
+							<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+							<radius>80</radius>
+							<attenuation>1</attenuation>
+							<attractor>0</attractor>
+							<rotator>0</rotator>
+						</force>
+						<surface name="particles" enabled="0" max_fade_distance="1e+008" material="dvs_weather_system_rain_drops" property="surface_base"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 30 1</transform>
+						<node type="ObjectParticles" id="2103767014" class="2" collider="0" folded="1" name="dvs_weather_system_rain_fume">
+							<texture_atlas>1</texture_atlas>
+							<spawn_rate>1</spawn_rate>
+							<growth_damping>1</growth_damping>
+							<emitter_type>5</emitter_type>
+							<emitter_enabled>1</emitter_enabled>
+							<life_mean>5</life_mean>
+							<life_spread>0</life_spread>
+							<velocity_mean>0</velocity_mean>
+							<velocity_spread>0</velocity_spread>
+							<rotation_mean>0</rotation_mean>
+							<rotation_spread>20</rotation_spread>
+							<radius_mean>4</radius_mean>
+							<radius_spread>0</radius_spread>
+							<growth_mean>1</growth_mean>
+							<growth_spread>0</growth_spread>
+							<surface name="particles" material="dvs_weather_system_fume" property="surface_base"/>
+							<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</transform>
+						</node>
+					</node>
+					<node type="ObjectParticles" id="466999208" class="2" collider="0" name="dvs_weather_system_wind_leaves">
+						<particles_type>4</particles_type>
+						<texture_atlas>1</texture_atlas>
+						<spawn_rate>0</spawn_rate>
+						<emitter_type>3</emitter_type>
+						<emitter_enabled>1</emitter_enabled>
+						<emitter_size>30 50 20</emitter_size>
+						<emitter_direction>0 3 0</emitter_direction>
+						<life_mean>4</life_mean>
+						<life_spread>0</life_spread>
+						<velocity_mean>0</velocity_mean>
+						<velocity_spread>0</velocity_spread>
+						<rotation_mean>0</rotation_mean>
+						<rotation_spread>100</rotation_spread>
+						<radius_mean>0.13</radius_mean>
+						<radius_spread>0.1</radius_spread>
+						<surface name="particles" material="dvs_weather_system_wind_leaves" property="surface_base"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 5 1</transform>
+					</node>
+					<node type="ObjectParticles" id="1495724830" class="2" collider="0" name="dvs_weather_system_wind_fume">
+						<texture_atlas>1</texture_atlas>
+						<spawn_rate>0</spawn_rate>
+						<emitter_type>3</emitter_type>
+						<emitter_enabled>1</emitter_enabled>
+						<emitter_based>1</emitter_based>
+						<emitter_size>30 50 10</emitter_size>
+						<emitter_direction>0 3 0</emitter_direction>
+						<period_mean>2</period_mean>
+						<period_spread>0</period_spread>
+						<duration_mean>1</duration_mean>
+						<duration_spread>1</duration_spread>
+						<life_mean>4</life_mean>
+						<life_spread>0</life_spread>
+						<velocity_mean>0</velocity_mean>
+						<velocity_spread>0</velocity_spread>
+						<rotation_mean>0</rotation_mean>
+						<rotation_spread>50</rotation_spread>
+						<radius_mean>7</radius_mean>
+						<radius_spread>0</radius_spread>
+						<surface name="particles" material="dvs_weather_system_fume" property="surface_base"/>
+						<transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 5 1</transform>
+					</node>
+				</node>
+				<node type="NodeReference" id="1745246120" class="2" name="dvs_weather_system_stars">
+					<reference>core/resources/weatherSystem/nodes/stars.node</reference>
+					<transform>1 0 0 0 0 1 0 0 0 0 1 0 -435.727 -78.5059 3.66152 1</transform>
+				</node>
+			</node>
+			<node type="WorldExpression" id="33938240" class="2" folded="1" name="NodesToPlayerBinding2">
+				<size>100000 100000 100000</size>
+				<expression>{
+
+// get player
+Player player = engine.getDVSMode() ? engine.game.getPlayer() : engine.editor.getPlayer();
+if(player == 0) return;
+
+// player position
+mat4 transform = player.getWorldTransform();
+
+// transform childs
+Node node = getNode();
+forloop(int i = 0; node.getNumChilds()) {
+Node child = node.getChild(i);
+child.setWorldTransform(transform);
+}
+
+}</expression>
+				<transform>1 0 0 0 0 1 0 0 0 0 1 0 432.778 74.3523 0 1</transform>
+				<node type="NodeDummy" id="126583507" class="2" name="NodesContainer">
+					<transform>0.864207 -0.503137 2.98023e-008 0 0.0870728 0.149559 0.984911 0 -0.495545 -0.851167 0.17306 0 -443.16 -91.2734 6.25741 1</transform>
+					<node type="ObjectParticles" id="1511927728" class="2" collider="0" name="dvs_weather_system_camera_drops">
+						<variation_x>1</variation_x>
+						<texture_atlas>1</texture_atlas>
+						<spawn_rate>0</spawn_rate>
+						<emitter_type>3</emitter_type>
+						<emitter_enabled>1</emitter_enabled>
+						<emitter_based>1</emitter_based>
+						<emitter_continuous>0</emitter_continuous>
+						<emitter_size>2 0 2</emitter_size>
+						<emitter_direction>0 0 -1</emitter_direction>
+						<emitter_spread>0 0 0</emitter_spread>
+						<life_mean>1</life_mean>
+						<life_spread>0.3</life_spread>
+						<velocity_mean>0</velocity_mean>
+						<velocity_spread>0</velocity_spread>
+						<angle_mean>0</angle_mean>
+						<angle_spread>0</angle_spread>
+						<radius_mean>0.07</radius_mean>
+						<radius_spread>0.03</radius_spread>
+						<gravity>0 0 -0.1</gravity>
+						<surface name="particles" material="dvs_weather_system_camera_drop" property="surface_base"/>
+						<transform>1 1.49789e-008 3.44132e-008 0 -2.76195e-008 0 -1 0 5.3551e-009 1 8.9407e-008 0 0.00012207 3.05176e-005 -1 1</transform>
+					</node>
+				</node>
+			</node>
+			<node type="ObjectDummy" id="224642444" class="2" name="ground">
+				<body type="BodyDummy" id="1523507640" frozen="0">
+					<shape type="ShapeBox" id="351269059" transform="1 0 0 0 0 1 0 0 0 0 1 0 0 0 -2 1">
+						<size>3000 3000 4</size>
+					</shape>
+				</body>
+				<transform>1 0 0 0 0 1 0 0 0 0 1 0 432.778 74.3523 0 1</transform>
+			</node>
+			<node type="ObjectDummy" id="1001145726" class="2" name="bounds">
+				<body type="BodyDummy" id="2092801787" frozen="0">
+					<shape type="ShapeBox" id="1962679477" name="box_right" transform="1 0 0 0 0 1 0 0 0 0 1 0 235 170 25 1">
+						<size>100 700 50</size>
+					</shape>
+					<shape type="ShapeBox" id="1639447575" name="box_left" transform="1 0 0 0 0 1 0 0 0 0 1 0 -560 170 25 1">
+						<size>100 700 50</size>
+					</shape>
+					<shape type="ShapeBox" id="1414082485" name="box_top" transform="1 0 0 0 0 1 0 0 0 0 1 0 -160 485 25 1">
+						<size>750 100 50</size>
+					</shape>
+					<shape type="ShapeBox" id="1593484877" name="box_bottom" transform="1 0 0 0 0 1 0 0 0 0 1 0 -160 -150 25 1">
+						<size>750 100 50</size>
+					</shape>
+					<shape type="ShapeBox" id="2137050946" name="box_corner_1" transform="1 0 0 0 0 1 0 0 0 0 1 0 -412 353 25 1">
+						<size>210 200 50</size>
+					</shape>
+					<shape type="ShapeBox" id="1301291994" name="box_corner_2" transform="1 0 0 0 0 1 0 0 0 0 1 0 50 375 25 1">
+						<size>400 200 50</size>
+					</shape>
+				</body>
+				<transform>1 0 -1.86265e-009 0 0 1 0 0 1.86265e-009 0 1 0 432.778 74.3522 -3.8147e-006 1</transform>
+			</node>
+		</node>
+	</editor>
+	<camera transform="0.919082 -0.394067 -1.49012e-008 0 0.122857 0.28654 0.950158 0 -0.374426 -0.873273 0.311767 0 -11.0741 -22.4445 9.90864 1" projection="1.73205 0 0 0 0 1.73205 0 0 0 0 -1.0002 -1 0 0 -0.20002 0" position="-4.02091 -5.99448 4.03581" direction="0.374426 0.873273 -0.311767" distance="18.8372" minVelocity="2" maxVelocity="4" accelation="4" damping="8"/>
+</world>
