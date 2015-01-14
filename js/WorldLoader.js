@@ -1,9 +1,8 @@
 DVSJS.WorldLoader=function(){
 	
-	this.baseUrl  ='';
-	this.WorldXml =null;
+	this.baseUrl  = '';
+	this.WorldXml = null;
     this.scene = null;
-    //this.matlist= new Array();
     this.mtlLoader = new DVSJS.MaterialLoader();	
 
 	this.loadFile=function(filecontent, filename,dvs3d){
@@ -16,12 +15,11 @@ DVSJS.WorldLoader=function(){
 		if ( filename !== undefined ) {
 		var parts = filename.split( '/' );
 		parts.pop();
-		this.baseUrl = ( parts.length < 1 ? '.' : parts.join( '/' ) ) ;
-		//console.log('relative path:'+this.baseUrl);
+		this.baseUrl = ( parts.length < 1 ? '.' : parts.join( '/' ) ) ;		
 		}
 
 		//parse content
-		this.parseMaterial(dvs3d);//console.log(dvs3d);
+		this.parseMaterial(dvs3d);
 		this.parseCamera(dvs3d);
 		this.parseEditor(dvs3d);
 
@@ -31,25 +29,15 @@ DVSJS.WorldLoader=function(){
 	this.parseMaterial=function(dvs3d){
 		var materials = this.WorldXml.querySelectorAll('materials library');
 		for ( var i = 0; i < materials.length; i++ ) {
-		var element = materials[i];
-        var mtlUrl = this.baseUrl+element.textContent;
-		console.log('mtl file:'+mtlUrl);
-		//var mtlLoader = new DVSJS.MaterialLoader();	
-		this.mtlLoader.loadFile(this.baseUrl,mtlUrl);
-		
-		}
-
-		//test
-		//var material = new THREE.MeshBasicMaterial( {color:0xddddddd,side:2,shininess:16} );
-		//var Cube = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), material);				 
-					
-		//dvs3d.scene.add(Cube);
-		//console.log(dvs3d);
-
-
+			var element = materials[i];
+        	var mtlUrl = this.baseUrl+element.textContent;					
+			this.mtlLoader.loadFile(this.baseUrl,mtlUrl);		
+		}		
 	};
 
 	this.parseCamera=function(dvs3d){
+		var campos = new THREE.Vector3();
+		var camdir    = new THREE.Vector3();
 		var camera = this.WorldXml.querySelectorAll('camera');	
 		for ( var i = 0; i < camera.length; i ++ ) {
 			var child = camera[ i ];
@@ -58,59 +46,55 @@ DVSJS.WorldLoader=function(){
 				if ( position ) {
 					var pos = new  Float32Array(16);				
 					pos = position.split(' ');
-					//console.log('camera pos:'+pos[0].toString()+pos[1].toString()+pos[2].toString());	
-
+					campos.x = pos[12];
+                    campos.y = pos[13];
+                    campos.z = pos[14];
 					dvs3d.camera.position.set(pos[12],pos[13],pos[14]); 
 				}
 
 				var direction = child.getAttribute( 'direction' );
 				if ( direction ) {
-					var pos = new  Float32Array(3);				
-					pos = direction.split(' ');
-					//console.log('camera dir:'+pos[0].toString()+pos[1].toString()+pos[2].toString());				
-					dvs3d.camera.lookAt(new THREE.Vector3(-0.896369, 0.135612, -0.422057));			
+					var dir= new  Float32Array(3);			
+					dir = direction.split(' ');
+					camdir.x= dir[0];
+                    camdir.y = dir[1];
+                    camdir.z = dir[2];			
 				}
 			}
-		}	
+		}
+
+		dvs3d.controls.setCamera(campos,camdir);	
 	};
 
 	this.parseEditor = function(dvs3d) {
-		var editors = this.WorldXml.getElementsByTagName('editor');
-	
+		var editors = this.WorldXml.getElementsByTagName('editor');		
 		for ( var i = 0; i < editors.length; i ++ ) {
 			var editor = editors[ i ];			
 			for (var j = 0; j < editor.childNodes.length; j++) {
 				var nodeXml = editor.childNodes[j];
-				if(nodeXml.nodeName == 'node'){
-					//this.parseNode(dvs3d,nodeXml);
+				if(nodeXml.nodeName == 'node'){					
 					var node = this.parseNode(dvs3d,nodeXml);
-					dvs3d.scene.add(node);
-					//console.log(node);
+					dvs3d.scene.add(node);					
 				}					
 			}
 		}
 	};
 
-	this.parseNode = function(dvs3d,nodeXml,parent) {
-		
+	this.parseNode = function(dvs3d,nodeXml,parent) {		
 		var node;
 		var meshList = new Array();
         var mtlList  = new Array();
-		//console.log(node.childNodes.length);
-		//console.log(nodeXml.nodeName);
 		var name = nodeXml.getAttribute( 'name' );
 		var type = nodeXml.getAttribute( 'type' );
 		switch(type){
-			case 'NodeDummy':
-				console.log(type);
+			case 'NodeDummy':			
 				node = new THREE.Object3D();				
 				node.name = name;
 				if(parent != undefined)
 					parent.add(node);				
 				break;
 
-			case 'ObjectMesh':
-				console.log(type);
+			case 'ObjectMesh':				
 				node = new THREE.Object3D();				
 				node.name = name;
 				if(parent != undefined)
@@ -125,15 +109,7 @@ DVSJS.WorldLoader=function(){
 				var name = surfaceXml.getAttribute( 'name' );
 				var mtlName = surfaceXml.getAttribute( 'material' );				
 			    var mtl = this.getMtl(mtlName);
-			    
-			    //console.log('nodeName:'+node.name);
-			    //console.log(mtlList.length);
-			    
-			    //console.log(mtl.color);
-			    //console.log('nodeName:'+node.name);
-			   // console.log('sarName:'+name);
-			    //console.log('sarMtlName:'+mtlName);
-			    //console.log('MtlColr:'+mtl.color.r.toString()+mtl.color.g.toString()+mtl.color.b.toString());
+
 				for (var j = 0; j < surfaceXml.childNodes.length; j++){
 					if(surfaceXml.childNodes[j].nodeName == 'material')
 					{	
@@ -141,21 +117,17 @@ DVSJS.WorldLoader=function(){
 						this.parseSurfaceMtl(mtl,mtlXml);
 					}
 				}
-
 				mtlList.push(mtl);
 			}		
 		};
 
 		for (var i = 0; i < nodeXml.childNodes.length; i++) {
-
 			if(nodeXml.childNodes[i].nodeName == 'node')
-			{	
-				//console.log(node.childNodes[i].nodeName);
+			{				
 				this.parseNode(dvs3d,nodeXml.childNodes[i],node);
 			}
 			else if(nodeXml.childNodes[i].nodeName == 'transform')
 			{
-				//console.log(nodeXml.childNodes[i].textContent);
 				var pos = new  Float32Array(16);				
 				pos = nodeXml.childNodes[i].textContent.split(' ');
 				var mat4 = new THREE.Matrix4();		
@@ -167,15 +139,11 @@ DVSJS.WorldLoader=function(){
 					node.applyMatrix(mat4);
 			}	
 			else if(nodeXml.childNodes[i].nodeName == 'mesh')
-			{
-				//mesh file
+			{	
 				var meshFile = this.baseUrl+'/'+nodeXml.childNodes[i].textContent;
                 
 				//mesh
 				var dvsMesh = new DVSJS.MeshLoader();
-				//var mtl= me.mtlList;
-				console.log(meshFile);
-				//console.log(mtlList[0].name); 
 				dvsMesh.addEventListener( 'load', function ( event) {
 					var geometry = event.content;				                
 					for (var j = 0; j < geometry.length; j++) {										
@@ -206,8 +174,7 @@ DVSJS.WorldLoader=function(){
 						var color =  new Float32Array(4);
 						color = parameter.textContent.split(' ');
 						material.color = new THREE.Color( color[0], color[1], color[2] );
-						material.opacity =color[3];
-					    // console.log('asa:'+parameter.textContent);
+						material.opacity =color[3];					   
 					break;					
 				}
 			}
@@ -235,7 +202,10 @@ DVSJS.WorldLoader=function(){
 		}
 	};
 
-	this.getMtl = function(name){
+	this.getMtl = function(name){	
+		if(dvsMat[name] != undefined)
+			return this.mtlLoader.getDefaultMtl(this.baseUrl,dvsMat[name]);
+
 		var mtlList = this.mtlLoader.getMtl();		
 		for (var i = 0; i < mtlList.length; i++) {
 				if(mtlList[i].name == name)
@@ -244,9 +214,6 @@ DVSJS.WorldLoader=function(){
 
 		var mtl = new THREE.MeshPhongMaterial( {side:2,shininess:31 } ); 
 		return mtl;
-	}
-
-	this.updata = function(){			
-
 	};
+	
 };

@@ -37,49 +37,11 @@ DVSJS.MeshLoader.prototype.load = function ( url, callback ) {
 	xhr.open( 'GET', url, true );
 	xhr.responseType = 'arraybuffer';
 	xhr.send( null );
-	
-
-		/*var me = this;
-		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.open("Get",url,false);
-		xmlhttp.send(null);
-		
-		if (xmlhttp.readyState == 4) {
- 			//console.log(xmlhttp.responseText);
- 			this.parseFile(xmlhttp.response || xmlhttp.responseText, url);
-		}*/
-
 };
 
 DVSJS.MeshLoader.prototype.parse = function ( data ) {
-
 	var reader = new DataView( data );
-	/*
-	var point = 0;
-	var magicNum = reader.getUint32( point, true );
-	point+=4;
 
-	//bunding 
-	var min = new Float32Array(3);
-	for (var i = 0; i < 3; i++) {
-		min[i] = reader.getFloat32(point+i*4, true);
-	};
-	point+=12;
-
-	var max = new Float32Array(3);
-	for (var i = 0; i < 3; i++) {
-		max[i] = reader.getFloat32(point+i*4, true);
-	};
-	point+=12;
-   
-   var center = new Float32Array(3);
-	for (var i = 0; i < 3; i++) {
-		center[i] = reader.getFloat32(point+i*4, true);
-	};
-	point+=12;
-    var radius = reader.getFloat32(point, true);
-    point+=4;
-*/
 	var point = 44;
    // var obj3d = new THREE.Object3D();
 	
@@ -148,12 +110,11 @@ DVSJS.MeshLoader.prototype.parse = function ( data ) {
 			normals[j*3+2] = normal[2];
 
 			var str = "after:"+j.toString()+":"+normals[j*3].toString()+","+normals[j*3+1].toString()+","+normals[j*3+2].toString();		
-			//console.log(str);
-
+		
 			point +=18;			
 		};
 
-		//alert(num_vertex);
+		
 
 		//tex1
 		var num_texcoord_0 = reader.getUint32( point, true );
@@ -163,11 +124,8 @@ DVSJS.MeshLoader.prototype.parse = function ( data ) {
 			texcoord[j*2+1] = reader.getFloat32(point + 4, true);
 			point+=8;
 			var str = j.toString()+":"+texcoord[j*2].toString()+","+texcoord[j*2+1].toString();
-			//alert(str);
-			//console.log(str);
 		};
-		//alert(num_texcoord_0);
-		//uv for lightmap
+
 		var num_texcoord_1 = reader.getUint32(point, true );	
 		point+= (num_texcoord_1*2+1)*4;
 
@@ -175,7 +133,7 @@ DVSJS.MeshLoader.prototype.parse = function ( data ) {
 		var num_indices = reader.getUint32( point, true )* 3;	
 		var indices = new Uint32Array( num_indices  );
 		point+= 4;
-		if(num_indices < 65536) {
+		if(num_vertex < 65536) {
 			for(var j = 0; j < num_indices; j++) {				
 				indices[j] = reader.getUint16(point + j*2, true);				
 			}
@@ -187,8 +145,7 @@ DVSJS.MeshLoader.prototype.parse = function ( data ) {
 				indices[j] = reader.getUint32(point + j*4, true);
 			}
 			point+=num_indices*4;
-		}
-        //alert(num_indices);
+		}       
 	  		  
 		geoList[i].addAttribute( 'uv',       new THREE.BufferAttribute( texcoord, 2 ) );
 		geoList[i].addAttribute( 'normal',   new THREE.BufferAttribute( normals, 3 ) );

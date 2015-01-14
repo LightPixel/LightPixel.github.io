@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<materials version="1.10">
+	<material name="dvs_base_1" parent="dvs_base">
+		<texture name="diffuse">textures/library_silver_rough_s.dds</texture>
+		<parameter name="base_transform">vec4(50.0f,50.0f,0.0f,0.0f)</parameter>
+		<parameter name="emission_color">0.425737 0.425737 0.425737 1</parameter>
+		<parameter name="diffuse_color">0.465337 0.465337 0.465337 1</parameter>
+		<parameter name="anisotropy_angle">54.642</parameter>
+		<parameter name="anisotropy_scale">1.589</parameter>
+	</material>
+	<material name="library_metal_plating_1" parent="library_metal_plating">
+		<parameter name="diffuse_color">0.425737 0.425737 0.425737 1</parameter>
+		<parameter name="specular_color">0.625914 0.767318 0.61538 0.478424</parameter>
+	</material>
+	<material name="library_metal_plating_3" parent="library_metal_plating">
+		<parameter name="specular_color">0.752478 0.794149 1 0.478427</parameter>
+	</material>
+	<material name="library_metal_stainless_steel_0" parent="library_metal_stainless_steel">
+		<parameter name="environment_scale">1</parameter>
+		<parameter name="diffuse_color">0.444608 0.465337 0.456102 1</parameter>
+		<parameter name="specular_scale">1.857</parameter>
+		<parameter name="phong_rim_width">0</parameter>
+		<parameter name="phong_rim_scale">0.017</parameter>
+		<parameter name="anisotropy_angle">54.642</parameter>
+		<parameter name="anisotropy_scale">1.857</parameter>
+		<parameter name="fresnel_bias">1</parameter>
+		<parameter name="fresnel_power">1</parameter>
+		<parameter name="reflection_normal">0</parameter>
+		<parameter name="reflection_scale">0.785</parameter>
+	</material>
+	<material name="library_metal_tin_1" parent="library_metal_tin">
+		<parameter name="refraction_scale">-0.786</parameter>
+		<parameter name="refraction_power">2</parameter>
+		<parameter name="diffuse_color">0.633659 0.633659 0.633659 1</parameter>
+		<parameter name="phong_rim_width">0.357</parameter>
+		<parameter name="fresnel_bias">0.839</parameter>
+		<parameter name="fresnel_power">2.18273</parameter>
+		<parameter name="reflection_normal">0.714</parameter>
+		<parameter name="reflection_color">1 1 1 1</parameter>
+		<parameter name="reflection_scale">1</parameter>
+	</material>
+</materials>

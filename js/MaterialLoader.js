@@ -33,7 +33,7 @@ DVSJS.MaterialLoader=function(){
 		 
 			if(mtlXml.nodeName == 'material')
 			{
-				var mtl = new THREE.MeshPhongMaterial();
+				/*var mtl = new THREE.MeshPhongMaterial();
 				
 				mtl.name = mtlXml.getAttribute('name');
 				if(mtl.name =='dvs_transparent'){
@@ -44,8 +44,11 @@ DVSJS.MaterialLoader=function(){
 				{
 					mtl.transparent = true;
 				   	mtl.opacity = 0.5;
-				}
-				//console.log(mtl.name);
+				}*/
+
+				var parentName = mtlXml.getAttribute('parent')
+				var mtl = this.getDefaultMtl(this.baseUrl,dvsMat[parentName]);
+				mtl.name = mtlXml.getAttribute('name');
 
 				for (var j = 0; j < mtlXml.childNodes.length; j++) {
 					var parameter = mtlXml.childNodes[j];
@@ -92,4 +95,31 @@ DVSJS.MaterialLoader=function(){
 		
 		return this.mtlList;
 	};
+
+	this.getDefaultMtl=function(baseUrl,matObj){
+		var mtl = new THREE.MeshPhongMaterial({side:2,shininess:16 });	
+		var loader = new THREE.DDSLoader();
+		var texPath = baseUrl +'/textures/';
+		for (var key in matObj)
+		{
+			switch(key){
+				case 'transparent':
+					mtl.transparent = matObj[key];
+				break; 
+				case 'opacity':
+					mtl.opacity = matObj[key];
+				break;
+				case 'color':
+					mtl.color = matObj[key];
+				break;
+				case 'map':                						  		
+					mtl.map = loader.load(texPath+ matObj[key]);
+				break;
+				case 'envMap':
+					mtl.envMap = loader.load(texPath+ matObj[key]);
+				break;
+			}
+    	}
+       return mtl;	
+	}
 };

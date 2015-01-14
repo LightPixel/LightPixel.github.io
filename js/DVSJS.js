@@ -7,9 +7,7 @@ var DVS3D = function(filetoload)
 	this.scene = new THREE.Scene();
 	this.camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.1, 6000 );
 	this.camera.up.set(0,0,1);
-	this.camera.position.set(14.01, -2.227, 9.183);
-	this.camera.lookAt(new THREE.Vector3(-0.896, 0.136, -0.422));
-	this.controls = new THREE.TrackballControls(this.camera );
+	this.controls = new DVSJS.CameraControls(this.camera );
 	
 	//default light
 	this.directionalLight = new THREE.DirectionalLight( 0x505050, 3);	
@@ -34,9 +32,6 @@ var DVS3D = function(filetoload)
     animate();
 
 	function update(){
-		//if(this.world != undefined)
-		//	this.world.updata();
-        
 		this.controls.update();	
 		this.scene.updateMatrixWorld(); 
 	    this.directionalLight.lookAt(this.camera.lookAt); 
@@ -46,18 +41,13 @@ var DVS3D = function(filetoload)
 	function render (){
 		update();
     	
-    	
     	renderer.autoClear = false;
    	 	renderer.clear();
-
     	renderer.render(this.scene, this.camera);
 	}
 
 	function animate (){
-		requestAnimationFrame(animate);
-	   
-	   
-	    
+		requestAnimationFrame(animate);	    
 	    render(); 
 	}
 
